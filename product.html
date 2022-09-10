@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button type="button" onclick="showProduct(products)">Click me to Show Product</button>
+    <p id="demo"></p>
+    <script>
+        const products = [
+            {
+                id: "01",
+                name: "samsung-galaxy-a03",
+                price: "9990 Baht",
+                img: "img/samsung-galaxy-a03-b.jpg"
+            },
+            {
+                id: '02',
+                name: "samsung-galaxy-a13",
+                price: "9999 Baht",
+                img: "img/samsung-galaxy-a13-b.jpg"
+            },
+            {
+                id: '03',
+                name: "samsung-galaxy-a22",
+                price: '9980 Baht',
+                img: "img/samsung-galaxy-a22-b.jpg"
+            },
+            {
+                id: '04',
+                name: "samsung-galaxy-a33",
+                price: '12800 Baht',
+                img: "img/samsung-galaxy-a33-5g-b.jpg"
+            },
+            {
+                id: '05',
+                name: "samsung-galaxy-a52g",
+                price: '13500 Baht',
+                img: "img/samsung-galaxy-a52g-5g-b.jpg"
+            },
+            {
+                id: '06',
+                name: "samsung-galaxy-a53",
+                price: '20000 Baht',
+                img: "img/samsung-galaxy-a53-5g-b.jpg"
+            },
+            {
+                id: '07',
+                name: "samsung-galaxy-z-flip3",
+                price: '52000 Baht',
+                img: "img/samsung-galaxy-z-flip3-5g-8gb-256gb-b.jpg"
+            },
+            {
+                id: '08',
+                name: "samsung-galaxy-s22-ultra",
+                price: '55000 Baht',
+                img: "img/samsung-galaxy-s22-ultra-12gb-512gb-b.jpg"
+            },
+            {
+                id: '09',
+                name: "samsung-galaxy-s21",
+                price: '32999 Baht',
+                img: "img/samsung-galaxy-s21-fe-5g-8gb-256gb-b.jpg"
+            },
+            {
+                id: '10',
+                name: "samsung-galaxy-s22-plus",
+                price: '43000 Baht',
+                img: "img/samsung-galaxy-s22-plus-8gb-256gb-b.jpg"
+            },
+        ]
+        let text = "<ul>";
+        let x = document.getElementById("demo")
+        products.forEach(showProduct);
+        text += "</ul>";
+        x.innerHTML = text;
+
+        function showProduct(value) {
+            text += `<li>ID: ${value.id} <br>Name: ${value.name} <br>Price: ${value.price} <br><img src=${value.img}></li>`
+            
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+    </script>
+
+
+</body>
+
+</html>
